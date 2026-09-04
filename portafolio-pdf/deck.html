@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>VG Designs — Portafolio 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Big+Shoulders+Stencil:wght@600;800&family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+  @page { size: 1280px 720px; margin: 0; }
+  * , *::before, *::after { box-sizing: border-box; margin: 0; }
+  html, body { width: 1280px; }
+  body {
+    font-family: "Inter", -apple-system, "Segoe UI", sans-serif;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    color: #111111;
+    background: #f4f0e7;
+  }
+  :root {
+    --bg: #0b0b0c; --ink: #111111; --cream: #f4f0e7; --ink-dim: #55524c;
+    --red: #e6402c; --green: #2f9e5c; --blue: #3b5fe0; --yellow: #f2b705;
+    --font-display: "Anton", "Arial Narrow", sans-serif;
+    --font-stencil: "Big Shoulders Stencil", "Arial Narrow", sans-serif;
+  }
+  h1,h2,h3,h4 { font-family: var(--font-display); text-transform: uppercase; line-height: .98; letter-spacing: -.01em; font-weight: 400; }
+  .dot { color: var(--red); }
+  .kicker { font-family: var(--font-stencil); font-weight: 700; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+  a { color: inherit; text-decoration: none; }
+  ul { list-style: none; padding: 0; }
+
+  .slide {
+    width: 1280px; height: 720px;
+    position: relative; overflow: hidden;
+    page-break-after: always;
+    padding: 56px 72px;
+    display: flex; flex-direction: column;
+  }
+  .slide:last-child { page-break-after: auto; }
+  .slide-dark { background: var(--ink); color: var(--cream); }
+  .slide-dark .kicker { color: #9c968a; }
+
+  .tag-dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+  .dot-red{background:var(--red)} .dot-green{background:var(--green)} .dot-blue{background:var(--blue)} .dot-yellow{background:var(--yellow)}
+
+  .brand-mark { font-family: var(--font-display); font-size: 28px; }
+
+  /* ---- Slide 1: Portada ---- */
+  #cover { align-items: center; justify-content: center; text-align: center; gap: 28px; }
+  #cover .brand-mark { font-size: 34px; position: absolute; top: 48px; left: 72px; }
+  #cover .kicker { position: absolute; top: 56px; right: 72px; }
+  #cover h1 { font-size: 128px; }
+  #cover p.sub { font-size: 22px; color: #c9c4b7; max-width: 640px; }
+  #cover .meta { position: absolute; bottom: 48px; left: 72px; right: 72px; display: flex; justify-content: space-between; font-family: var(--font-stencil); font-size: 13px; letter-spacing: .1em; color: #9c968a; text-transform: uppercase; }
+
+  /* ---- Slide 2: Sobre mí ---- */
+  #estudio { flex-direction: row; align-items: center; gap: 64px; }
+  #estudio .polaroid { background: var(--cream); padding: 14px 14px 22px; box-shadow: 0 18px 40px rgba(0,0,0,.18); transform: rotate(-4deg); width: 300px; flex: none; }
+  #estudio .polaroid-photo { aspect-ratio: 4/5; background: linear-gradient(160deg,#1a1a1c,#3a3a3f 60%,#1a1a1c); display:flex; align-items:center; justify-content:center; }
+  #estudio .polaroid-photo span { font-family: var(--font-display); font-size: 72px; color: rgba(244,240,231,.85); }
+  #estudio .polaroid-caption { font-family: var(--font-stencil); font-size: 12px; letter-spacing: .05em; text-align: center; margin-top: 14px; color: var(--ink-dim); }
+  #estudio .copy h2 { font-size: 56px; margin: 10px 0 22px; }
+  #estudio .copy em { color: var(--red); font-style: normal; }
+  #estudio .copy p { font-size: 19px; color: var(--ink-dim); max-width: 640px; line-height: 1.55; margin-bottom: 24px; }
+  #estudio .chips { display: flex; gap: 10px; }
+  #estudio .chip { border: 2px solid var(--ink); padding: 8px 16px; font-weight: 700; font-size: 14px; }
+  #estudio .chip.active { background: var(--yellow); border-color: var(--yellow); }
+
+  /* ---- Slide 3: Servicios ---- */
+  #servicios h2 { font-size: 52px; margin: 8px 0 30px; }
+  #servicios .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; flex: 1; }
+  .svc-card { border: 2px solid var(--ink); border-top-width: 6px; background: var(--cream); padding: 22px; display: flex; flex-direction: column; }
+  .svc-card .top { display:flex; justify-content: space-between; font-family: var(--font-stencil); font-weight:700; font-size: 13px; color: var(--ink-dim); }
+  .svc-card .badge { border: 2px solid var(--ink); padding: 2px 8px; font-weight: 800; }
+  .svc-card h3 { font-size: 24px; margin: 14px 0 8px; }
+  .svc-card p { font-size: 15px; color: var(--ink-dim); line-height: 1.4; }
+  .accent-red{border-top-color:var(--red)} .accent-green{border-top-color:var(--green)} .accent-blue{border-top-color:var(--blue)} .accent-yellow{border-top-color:var(--yellow)}
+
+  /* ---- Pricing slides ---- */
+  .price-slide h2 { font-size: 46px; margin: 8px 0 26px; }
+  .price-row-cards { display: grid; gap: 18px; flex: 1; }
+  .cols-3 { grid-template-columns: repeat(3,1fr); }
+  .cols-2 { grid-template-columns: repeat(2,1fr); }
+  .price-card { background: #16161a; border: 1px solid rgba(244,240,231,.14); border-top: 4px solid var(--red); padding: 22px 20px; position: relative; display:flex; flex-direction:column; }
+  .price-card.g { border-top-color: var(--green); }
+  .price-card.y { border-top-color: var(--yellow); }
+  .price-tag { font-family: var(--font-stencil); font-size: 12px; color: #9c968a; }
+  .discount { position:absolute; top:18px; right:18px; background: var(--red); color: var(--cream); font-family: var(--font-stencil); font-weight:800; font-size: 11px; padding: 3px 7px; }
+  .price-card h3 { font-family: var(--font-display); text-transform:none; font-size: 21px; margin: 10px 0 6px; }
+  .price-line { display:flex; align-items:baseline; gap: 8px; margin-bottom: 12px; }
+  .price-now { font-family: var(--font-stencil); font-weight:800; font-size: 22px; }
+  .price-old { font-size: 13px; color:#7a756a; text-decoration: line-through; }
+  .price-card ul { display:flex; flex-direction:column; gap: 5px; font-size: 13px; color:#c9c4b7; }
+  .price-card li { padding-left: 14px; position: relative; }
+  .price-card li::before { content:"▸"; position:absolute; left:0; color: var(--red); }
+  .price-note { margin-top: 20px; font-size: 14px; color: #8a8577; }
+
+  .combo-card { border: 1px solid var(--red); background: rgba(230,64,44,.08); padding: 24px 22px; }
+  .combo-card h3 { font-family: var(--font-display); text-transform:none; font-size: 22px; margin-bottom: 8px; }
+  .combo-card .desc { font-size: 14px; color: #c9c4b7; margin-bottom: 14px; }
+
+  /* ---- Trabajos ---- */
+  #trabajos h2 { font-size: 46px; margin: 8px 0 26px; }
+  #trabajos .row { display: flex; gap: 40px; flex: 1; }
+  .case { flex: 1.1; border: 2px solid var(--ink); background: var(--cream); display:flex; flex-direction:column; }
+  .case-bar { display:flex; align-items:center; gap:6px; background:#e4ded0; padding: 10px 14px; }
+  .case-bar span { width:9px;height:9px;border-radius:50%; background: rgba(17,17,17,.25); }
+  .case-bar i { margin-left: 10px; font-style: normal; font-size: 12px; color: var(--ink-dim); }
+  .case-hero { background: linear-gradient(135deg,#123045,#1c4f68 60%,#0d2431); color: var(--cream); padding: 26px 22px; flex: 1; display:flex; flex-direction:column; justify-content:flex-end; gap: 6px; }
+  .case-hero .tag { font-family: var(--font-stencil); font-size: 11px; letter-spacing:.06em; color:#9fd3c7; }
+  .case-hero .line { font-family: var(--font-display); text-transform:none; font-size: 26px; line-height:1.1; }
+  .case-copy { padding: 20px 22px; }
+  .case-copy .kicker { font-size: 11px; }
+  .case-copy h3 { font-size: 26px; margin: 8px 0 12px; }
+  .case-copy ul { display:flex; flex-direction:column; gap:6px; font-size:14px; color: var(--ink-dim); }
+  .case-copy li { padding-left:14px; position:relative; }
+  .case-copy li::before { content:"—"; position:absolute; left:0; }
+  .clients { flex: 1; display: flex; flex-direction: column; gap: 16px; justify-content: center; }
+  .client-card { border: 2px solid var(--ink); border-top-width: 5px; background: var(--cream); padding: 18px 20px; }
+  .client-card h4 { font-family: var(--font-display); text-transform:none; font-size: 19px; margin-bottom: 4px; }
+  .client-card .type { font-family: var(--font-stencil); font-size: 11px; color: var(--ink-dim); margin-bottom: 8px; }
+  .client-card .quote { font-size: 13px; font-style: italic; color: var(--ink-dim); }
+
+  /* ---- Contacto ---- */
+  #contacto { align-items: center; justify-content: center; text-align: center; gap: 26px; }
+  #contacto h2 { font-size: 92px; }
+  #contacto .cta { background: var(--red); color: var(--cream); font-weight: 800; font-size: 20px; padding: 18px 34px; box-shadow: 6px 6px 0 var(--cream); }
+  #contacto .links { display:flex; gap: 64px; margin-top: 30px; }
+  #contacto .links div { text-align:center; }
+  #contacto .links .label { font-family: var(--font-stencil); font-size: 12px; letter-spacing:.1em; color:#9c968a; margin-bottom:6px; text-transform:uppercase; }
+  #contacto .links a.value { font-weight:700; font-size: 17px; border-bottom: 2px solid var(--red); }
+  #contacto .site-link { margin-top: 34px; font-size: 14px; color: #9c968a; }
+  #contacto .site-link a { border-bottom: 1px solid #9c968a; }
+</style>
+</head>
+<body>
+
+  <!-- 1. PORTADA -->
+  <section class="slide slide-dark" id="cover">
+    <span class="brand-mark">VG<span class="dot">.</span></span>
+    <p class="kicker">Portafolio 2026</p>
+    <h1>DISEÑO<br>QUE VENDE<span class="dot">.</span></h1>
+    <p class="sub">Identidad, sitios web y piezas gráficas para marcas que quieren notarse.</p>
+    <div class="meta">
+      <span>Vicente Gómez — VG Designs</span>
+      <span>Puerto Montt, Chile · Est. 2024</span>
+    </div>
+  </section>
+
+  <!-- 2. SOBRE MÍ -->
+  <section class="slide" id="estudio">
+    <div class="polaroid">
+      <div class="polaroid-photo"><span>VG</span></div>
+      <p class="polaroid-caption">VICENTE GÓMEZ — PUERTO MONTT</p>
+    </div>
+    <div class="copy">
+      <p class="kicker">01 / Estudio</p>
+      <h2>MENOS RUIDO.<br><em>MÁS IMPACTO.</em></h2>
+      <p>Hola, soy Vicente Gómez, fundador de VG Designs desde Puerto Montt. Diseño web, identidad visual y contenido para marcas que buscan diferenciarse — con personalidad, estrategia e impacto.</p>
+      <div class="chips">
+        <span class="chip">Estrategia</span>
+        <span class="chip active">Impacto</span>
+        <span class="chip">Detalle</span>
+        <span class="chip">Sistema</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SERVICIOS -->
+  <section class="slide" id="servicios">
+    <p class="kicker">02 / Servicios</p>
+    <h2>Qué hago<span class="dot">.</span></h2>
+    <div class="grid">
+      <article class="svc-card accent-red"><div class="top"><span>01</span><span class="badge">BASE</span></div><h3>Diseño Web</h3><p>Landing de una sección, rápida y lista para vender desde el día uno.</p></article>
+      <article class="svc-card accent-green"><div class="top"><span>02</span><span></span></div><h3>Branding</h3><p>Sistema de marca completo: del logo al lenguaje visual.</p></article>
+      <article class="svc-card accent-blue"><div class="top"><span>03</span><span></span></div><h3>Logos</h3><p>Marcas memorables construidas desde una idea sólida.</p></article>
+      <article class="svc-card accent-yellow"><div class="top"><span>04</span><span class="badge">48H</span></div><h3>Flyers</h3><p>Piezas con jerarquía clara y tipografía con carácter.</p></article>
+      <article class="svc-card accent-red"><div class="top"><span>05</span><span></span></div><h3>Video / Reels</h3><p>Edición con dirección de arte para Instagram y TikTok.</p></article>
+      <article class="svc-card accent-green"><div class="top"><span>06</span><span></span></div><h3>Redes Sociales</h3><p>Contenido mensual con estética consistente.</p></article>
+    </div>
+  </section>
+
+  <!-- 4. PRECIOS — DISEÑO WEB -->
+  <section class="slide slide-dark price-slide" id="precios1">
+    <p class="kicker">03 / Precios 2026</p>
+    <h2>Diseño Web<span class="dot">.</span></h2>
+    <div class="price-row-cards cols-3">
+      <article class="price-card">
+        <span class="price-tag">01</span><span class="discount">-30%</span>
+        <h3>Diseño Web — Landing</h3>
+        <p class="price-line"><span class="price-now">$220.000</span><span class="price-old">$320.000</span></p>
+        <ul><li>Landing 1 sección</li><li>Diseño responsive</li><li>SEO base</li><li>Deploy incluido</li></ul>
+      </article>
+      <article class="price-card">
+        <span class="price-tag">01+</span><span class="discount">-27%</span>
+        <h3>Diseño Web Pro</h3>
+        <p class="price-line"><span class="price-now">$380.000</span><span class="price-old">$520.000</span></p>
+        <ul><li>Hasta 5 secciones/páginas</li><li>Animaciones premium</li><li>Formulario + CMS ligero</li><li>SEO avanzado + Analytics</li></ul>
+      </article>
+      <article class="price-card">
+        <span class="price-tag">01++</span><span class="discount">-30%</span>
+        <h3>Diseño Web Elite</h3>
+        <p class="price-line"><span class="price-now">$620.000</span><span class="price-old">$890.000</span></p>
+        <ul><li>Diseño 100% custom</li><li>E-commerce o panel dinámico</li><li>Integraciones (pagos, API)</li><li>Soporte 30 días</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- 5. PRECIOS — IDENTIDAD & CONTENIDO -->
+  <section class="slide slide-dark price-slide" id="precios2">
+    <p class="kicker">03 / Precios 2026</p>
+    <h2>Identidad &amp; Contenido<span class="dot">.</span></h2>
+    <div class="price-row-cards cols-2" style="margin-bottom:18px;">
+      <article class="price-card g">
+        <span class="price-tag">02</span><span class="discount">-25%</span>
+        <h3>Branding</h3>
+        <p class="price-line"><span class="price-now">$160.000</span><span class="price-old">$220.000</span></p>
+        <ul><li>Logo principal + variantes</li><li>Paleta y tipografía</li><li>Manual básico PDF</li></ul>
+      </article>
+      <article class="price-card g">
+        <span class="price-tag">03</span><span class="discount">-30%</span>
+        <h3>Logos</h3>
+        <p class="price-line"><span class="price-now">$55.000</span><span class="price-old">$80.000</span></p>
+        <ul><li>2 propuestas</li><li>3 rondas de cambios</li><li>Archivos vectoriales</li></ul>
+      </article>
+    </div>
+    <div class="price-row-cards cols-2">
+      <article class="price-card y">
+        <span class="price-tag">04</span><span class="discount">-35%</span>
+        <h3>Flyers</h3>
+        <p class="price-line"><span class="price-now">$19.000</span><span class="price-old">$30.000</span></p>
+        <ul><li>Diseño en 48h</li><li>Formato print + redes</li><li>2 correcciones</li></ul>
+      </article>
+      <article class="price-card y">
+        <span class="price-tag">05</span><span class="discount">-35%</span>
+        <h3>Video / Reels</h3>
+        <p class="price-line"><span class="price-now">$39.000</span><span class="price-old">$60.000</span></p>
+        <ul><li>Reel hasta 60s</li><li>Música + subtítulos</li><li>Color grading</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- 6. PRECIOS — COMBOS -->
+  <section class="slide slide-dark price-slide" id="precios3">
+    <p class="kicker">03 / Precios 2026</p>
+    <h2>Combos con descuento extra<span class="dot">.</span></h2>
+    <div class="price-row-cards cols-3">
+      <article class="combo-card">
+        <h3>Pack Marca</h3>
+        <p class="desc">Logo + Branding + 3 Flyers</p>
+        <p class="price-line"><span class="price-now">$220.000</span><span class="price-old">$297.000</span></p>
+      </article>
+      <article class="combo-card">
+        <h3>Pack Digital</h3>
+        <p class="desc">Diseño Web + Logo + 4 Reels</p>
+        <p class="price-line"><span class="price-now">$420.000</span><span class="price-old">$611.000</span></p>
+      </article>
+      <article class="combo-card">
+        <h3>Pack Total</h3>
+        <p class="desc">Web + Branding + Redes Sociales (1 mes)</p>
+        <p class="price-line"><span class="price-now">$480.000</span><span class="price-old">$730.000</span></p>
+      </article>
+    </div>
+    <p class="price-note">Precios referenciales de campaña 2026 — cada proyecto se confirma según alcance real.</p>
+  </section>
+
+  <!-- 7. TRABAJOS -->
+  <section class="slide" id="trabajos">
+    <p class="kicker">04 / Trabajos</p>
+    <h2>Algunos proyectos<span class="dot">.</span></h2>
+    <div class="row">
+      <div class="case">
+        <div class="case-bar"><span></span><span></span><span></span><i>veterinariaaustral.cl</i></div>
+        <div class="case-hero">
+          <p class="tag">📍 PUERTO MONTT · ⏱ ABIERTO 24 HORAS</p>
+          <p class="line">Cuidado veterinario 24 horas en Puerto Montt.</p>
+        </div>
+        <div class="case-copy">
+          <p class="kicker">Caso 01 — Centro Médico Veterinario Austral</p>
+          <h3>Diseño web + identidad digital</h3>
+          <ul>
+            <li>Sitio completo con urgencias 24h y galería</li>
+            <li>Sistema de reserva de horas online</li>
+            <li>Integración de WhatsApp y contacto directo</li>
+          </ul>
+        </div>
+      </div>
+      <div class="clients">
+        <article class="client-card" style="border-top-color:var(--red)">
+          <h4>Empanadas PiedrAzul</h4>
+          <p class="type">Logo + identidad</p>
+          <p class="quote">"Vicente entendió al toque la esencia de PiedrAzul. El logo y el sitio web nos posicionaron."</p>
+        </article>
+        <article class="client-card" style="border-top-color:var(--blue)">
+          <h4>Funko Nation Chile</h4>
+          <p class="type">Logo</p>
+          <p class="quote">"El logo levantó el alcance de forma real. Diseño con propósito, no relleno."</p>
+        </article>
+        <article class="client-card" style="border-top-color:var(--yellow)">
+          <h4>Nogal Remodelaciones</h4>
+          <p class="type">Logo + identidad</p>
+          <p class="quote">"Pasamos de una imagen improvisada a un sistema visual sólido que transmite confianza."</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. CONTACTO -->
+  <section class="slide slide-dark" id="contacto">
+    <p class="kicker">05 / Contacto</p>
+    <h2>HABLEMOS<span class="dot">.</span></h2>
+    <a class="cta" href="https://wa.me/56963074376?text=Hola%20Vicente%2C%20quiero%20empezar%20un%20proyecto">Comenzar proyecto →</a>
+    <div class="links">
+      <div><p class="label">Instagram</p><a class="value" href="https://instagram.com/vg_desings">@vg_desings</a></div>
+      <div><p class="label">Correo</p><a class="value" href="mailto:vg.desings@gmail.com">vg.desings@gmail.com</a></div>
+      <div><p class="label">WhatsApp</p><a class="value" href="https://wa.me/56963074376">+56 9 6307 4376</a></div>
+    </div>
+    <p class="site-link">Ver portafolio completo online → <a href="https://claude.ai/code/artifact/e8a9569e-1be3-4452-a0d8-0c11eb70d2e7">claude.ai/code/artifact/e8a9569e…</a></p>
+  </section>
+
+</body>
+</html>

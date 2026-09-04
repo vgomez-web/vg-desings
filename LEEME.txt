@@ -1,0 +1,27 @@
+VG Designs — sitio listo para subir a Hostinger (o cualquier hosting) por FTP / File Manager.
+
+PÁGINAS DEL SITIO
+- index.html — la página principal (home).
+- tarjetas-nfc.html — página del servicio de Tarjetas NFC (a la que lleva el botón "Descubrir NFC" del home).
+
+CÓMO PROBARLO EN TU PC
+- Simplemente abre index.html haciendo doble clic. Funciona sin instalar nada.
+
+CÓMO SUBIRLO A HOSTINGER
+- Sube TODA la carpeta "vg-designs" (incluyendo el archivo oculto .htaccess e index.html Y tarjetas-nfc.html) a public_html.
+- No necesitas subir la carpeta "assets/photos/source" si quieres ahorrar espacio (son solo tus fotos originales).
+
+AGREGAR TUS FOTOS REALES
+Ahora mismo el sitio funciona con "placeholders" de diseño (tu foto usa tus iniciales "VG", y los trabajos de logo se muestran como texto tipográfico en vez de las imágenes reales). Se ve intencional, no roto — pero si quieres reemplazarlo por tus fotos reales, dímelo en el chat y las integro, o si prefieres hacerlo tú:
+1. Deja tus imágenes en assets/photos/source/ (cualquier nombre).
+2. Avísame en el chat y las proceso, las convierto y las conecto al HTML.
+
+CADA VEZ QUE HAGAS UN CAMBIO Y LO SUBAS A HOSTINGER
+- Cambia el número "?v=20260823" (en el <link> de styles.css y el <script> de main.js, en AMBOS archivos .html) por la fecha del día. Esto evita que el navegador muestre una versión vieja en caché.
+
+PRECIOS
+- Los precios en la sección "Precios 2026" son referenciales (los puse yo como ejemplo, o los que me diste). Dime los reales/definitivos y los actualizo.
+- El Plan Inicial ($180.000) se muestra solo al cargar; "Ver planes más completos" despliega Profesional y Premium.
+
+PROYECTOS
+- Por ahora solo está el caso de Veterinaria Austral. La grilla (".projects-grid" en index.html) ya está lista para agregar más proyectos cuando los tengas — avísame y los sumo.
