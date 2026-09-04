@@ -12,7 +12,7 @@
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230b0b0c'/%3E%3Ctext x='50' y='68' font-family='Arial,sans-serif' font-weight='900' font-size='58' fill='%23f5f1ea' text-anchor='middle'%3EVG%3C/text%3E%3Crect x='72' y='20' width='14' height='14' fill='%23e6402c'/%3E%3C/svg%3E">
 
-<link rel="stylesheet" href="styles.css?v=20260915">
+<link rel="stylesheet" href="styles.css?v=20260918">
 <noscript><style>.reveal{opacity:1!important;transform:none!important;}.splash{display:none!important;}</style></noscript>
 </head>
 <body>
@@ -49,16 +49,52 @@
 
   <!-- ============== HERO ============== -->
   <section class="hero" id="inicio">
-    <div class="hero-grain" aria-hidden="true"></div>
-
     <div class="container hero-inner">
-      <p class="kicker reveal">VG DESIGNS — EST. 2024 · PUERTO MONTT</p>
-      <h1 class="hero-title reveal" data-split>DISEÑO<br>QUE VENDE<span class="dot">.</span></h1>
-      <p class="hero-sub reveal">Identidad, sitios web y piezas gráficas para marcas que quieren notarse. Menos ruido, más impacto.</p>
-      <div class="hero-actions reveal">
-        <a class="btn btn-primary" data-magnetic href="#proyectos">Ver proyectos ↓</a>
-        <a class="btn btn-ghost-light" data-magnetic href="https://wa.me/56963074376?text=Hola%20Vicente%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+      <div class="hero-copy">
+        <p class="kicker reveal">VG DESIGNS — PUERTO MONTT / CHILE</p>
+        <h1 class="hero-title reveal" data-split>HACEMOS QUE<br>TU MARCA<br>SE VEA PRO<span class="dot">.</span></h1>
+        <p class="hero-tags reveal">Sitios web · Identidad · Diseño gráfico</p>
+        <p class="hero-sub reveal">Diseño pensado para que tu negocio se vea profesional, genere confianza y venda mejor.</p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" data-magnetic href="#proyectos">Ver proyectos ↘</a>
+          <a class="btn btn-ghost-light" data-magnetic href="https://wa.me/56963074376?text=Hola%20Vicente%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener">¿Tienes un proyecto? Hablemos →</a>
+        </div>
       </div>
+
+      <!-- Prueba visual real — mismo mockup/imágenes que #proyectos, reutilizado tal cual -->
+      <div class="hero-visual reveal" aria-hidden="true">
+        <p class="hero-visual-label">Proyecto real — Veterinaria Austral</p>
+        <div class="case-devices hero-devices">
+          <div class="device-laptop-lg">
+            <div class="device-laptop-screen">
+              <div class="device-laptop-bar">
+                <span></span><span></span><span></span>
+                <i>veterinariaaustral.cl</i>
+              </div>
+              <div class="device-scroll-frame">
+                <img class="device-scroll-img" src="assets/img/case-veterinaria-desktop.png" alt="">
+                <span class="device-shine"></span>
+              </div>
+            </div>
+            <div class="device-phone-wrap">
+              <div class="device-phone-lg">
+                <div class="device-phone-notch"></div>
+                <div class="device-scroll-frame device-scroll-frame-sm">
+                  <img class="device-scroll-img" src="assets/img/case-veterinaria-mobile.png" alt="">
+                  <span class="device-shine"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== TRANSICIÓN ============== -->
+  <section class="hero-transition">
+    <div class="container">
+      <p class="hero-transition-text reveal">DISEÑO<br>QUE VENDE<span class="dot">.</span></p>
     </div>
   </section>
 
@@ -67,7 +103,7 @@
     <div class="container">
       <div class="section-head">
         <p class="kicker reveal">01 / SERVICIOS</p>
-        <h2 class="reveal">Qué hago<span class="dot">.</span></h2>
+        <h2 class="reveal">Qué hacemos<span class="dot">.</span></h2>
         <a class="link-arrow reveal" href="https://wa.me/56963074376?text=Hola%20Vicente%2C%20quiero%20pedir%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener">Pedir cotización →</a>
       </div>
 
@@ -177,7 +213,7 @@
     <div class="container">
       <div class="section-head">
         <p class="kicker reveal">03 / CONFIANZA</p>
-        <h2 class="reveal">Con quién he trabajado<span class="dot">.</span></h2>
+        <h2 class="reveal">Con quién trabajamos<span class="dot">.</span></h2>
       </div>
 
       <div class="logo-grid" data-stagger-group>
@@ -201,11 +237,11 @@
     </div>
   </section>
 
-  <!-- ============== SOBRE MÍ (bloque chico) ============== -->
-  <section class="about-strip reveal" id="sobre-mi">
+  <!-- ============== QUIÉNES SOMOS (bloque chico) ============== -->
+  <section class="about-strip reveal" id="sobre-nosotros">
     <div class="container about-strip-inner">
       <div class="about-avatar" aria-hidden="true"><span>VG</span></div>
-      <p class="about-text"><strong>Hola, soy Vicente Gómez</strong>, creador de VG Designs. Ayudo a negocios de Puerto Montt a mejorar su presencia digital con diseño claro y efectivo.</p>
+      <p class="about-text"><strong>Somos VG Designs</strong>, estudio de diseño en Puerto Montt liderado por Vicente Gómez. Ayudamos a negocios a mejorar su presencia digital con diseño claro y efectivo.</p>
     </div>
   </section>
 
@@ -432,6 +468,6 @@
 <script defer src="lib/gsap.min.js"></script>
 <script defer src="lib/ScrollTrigger.min.js"></script>
 <script defer src="lib/manifest.js"></script>
-<script defer src="main.js?v=20260915"></script>
+<script defer src="main.js?v=20260918"></script>
 </body>
 </html>
