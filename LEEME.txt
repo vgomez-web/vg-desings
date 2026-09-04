@@ -25,3 +25,4 @@ PRECIOS
 
 PROYECTOS
 - Por ahora solo está el caso de Veterinaria Austral. La grilla (".projects-grid" en index.html) ya está lista para agregar más proyectos cuando los tengas — avísame y los sumo.
+Sitio oficial VG Designs
